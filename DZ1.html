@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+// let arr1 = [55, 44, 33, 22, 11];
+// let maxNumber = Math.max.apply(null, arr1);   // ПРОСТО ВАРИАНТ, ПОГУГЛИВ ФУНКЦИЮ
+// alert(maxNumber);
+
+
+
+let indexOfNumber = 0;
+let arr1 = [33, 44, 55, 22, 11];
+let maxNumber = 0;
+for (i=0; i<arr1.length; i++){
+    if(arr1[i]>maxNumber){
+        maxNumber = arr1[i];
+        indexOfNumber = arr1.indexOf(arr1[i]);
+    }
+}
+        alert(maxNumber);
+        alert(indexOfNumber);
+
+</script>
+
+</body>
+</html>

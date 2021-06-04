@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        ul {
+            list-style: none;
+            display: flex;
+            margin-top: 45px;
+        }
+        a {
+            padding: 16px;
+            background: teal;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: magenta;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Создать меню</h1>
+    <form name="menu">
+        <p>Пункт меню: <input style="width: 300px;" type="text" name="menuTitle" placeholder="Введите название меню" value="Главная, О компании, Новости"></p>
+        <p>Цвет текста: <input type="color" value="#ffffff" name="fColor"></p>
+        <p>Цвет Фона: <input type="color" value="#41aedc" name="bColor"></p>
+        <p>Цвет наведения мышки: <input type="color" value="#fd9c10" name="hColor"></p>
+        <p><input type="button" name="but" value="Создать меню" onclick="Menu()"></p>
+    </form>
+
+    <div id="myStyle"></div>
+    <div id="myMenu"></div>
+
+<!-- <ul>
+    <li><a href="#">Главная</a></li>
+    <li><a href="#">О компании</a></li>
+    <li><a href="#">Новости</a></li>
+</ul> -->
+
+<script>
+
+function Menu() {
+
+let elemMenu = menu.menuTitle.value,
+    fc = menu.fColor.value,
+    bc = menu.bColor.value,
+    hc = menu.hColor.value;
+
+    let arrMenu = elemMenu.split(', ');
+    // console.log(arrMenu);
+// alert(elemMenu);
+    let s ='', s1 = ' ', myList='';
+    for (i=0; i<arrMenu.length; i++) {
+
+        s += `<li><a href="#">${arrMenu[i]}</a></li>`;
+    }
+}
+// consolelog(s);
+    myList= `<ul>${s}</ul>`;
+
+    s1 = `
+    a {
+            background: ${};
+            color: ${fc};
+        }
+    `
+
+    myMenu.innerHTML = myList;
+</script>
+
+
+</body>
+</html>

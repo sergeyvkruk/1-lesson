@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="box1"></div>
+<script>
+
+let s = "", i = 1;
+
+while (i<=11) {
+    if (i % 2 == 0) {
+        s += `<img src="images/${i}.jpg" style="border: 3px solid red">`
+    } else {
+        s += `<img src="images/${i}.jpg" style="border: 3px solid green">`;
+        i++;
+    }
+}
+box.innerHTML = s;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+function setColor(){
+let colors = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+
+let item = Math.floor(Math.random()*colors.length);
+// alert(colors[item]);
+
+let s = '#';
+for(i=0; i<6; i++){
+    item = Math.floor(Math.random()*colors.length);
+    s += colors[item];
+}
+// alert(s);
+document.body.style.background = s;}
+setTimeout(setColor(), 1)
+</script>
+<button onclick="setColor()">Выберите цвет</button>
+
+</body>
+</html>
